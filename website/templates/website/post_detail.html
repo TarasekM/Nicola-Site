@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>Nicola Kalisz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nicola Kalisz">
+  <link rel="shortcut icon" href="">
+
+
+  {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/post_details.css' %}">
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  <div class="back">
+    <a href='{% url 'post_list' %}'>
+      Powrót
+    </a>
+  </div>
+  <div class="image_containter">
+    <img src="{{MEDIA_URL}}{{post.image}}" class="img">
+  </div>
+  <div class="image-description">
+    <h1 class="image-description_title">{{post.title}}</h1>
+    <p class="image-description_text">{{post.text}}</p>
+    <p class="image-description_pub-date">{{post.published_date}}
+  </div>
+  {% endblock %}
+</body>
+
+</html>

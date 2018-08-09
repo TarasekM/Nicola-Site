@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>Nicola Kalisz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nicola Kalisz">
+  <link rel="shortcut icon" href="" >
+  {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  {% endblock %}
+</head>
+
+<body>
+
+  {% block content %}
+
+  <main>
+    <form class="categories-form">
+      <label for="categories">Kategorie</label>
+      <select id="category">
+        <option value="ludzie">Ludzie</option>
+        <option value="zwierzęta">Zwierzęta</option>
+        <option value="natura">Natura</option>
+      </select>
+    </form>
+    </div>
+    <div class="image_containter">
+      <div class="backdrop"></div>
+      <div class="modal">
+        <img src="" class="modal_image">
+            <button class="modal_image--close">&#10006;</button>
+      </div>
+      {% for post in post_list %}
+      <img src="{{MEDIA_URL}}{{post.image}}" class="img">
+      <div class="image-description">
+        <h1 class="image-description_title">{{post.title}}</h1>
+        <p class="image-description_text">{{post.text}}</p>
+        <p class="image-description_pub-date">{{post.published_date}}
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+  <script src="{% static 'js/main.js' %}"></script>
+  {% endblock %}
+</body>
+
+</html>

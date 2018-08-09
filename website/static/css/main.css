@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans");
+main {
+  display: grid;
+  grid-template-rows: 3rem auto 2rem;
+  grid-template-areas: "categories" "images" "footer";
+}
+
+.categories-form {
+  grid-area: categories;
+  align-self: center;
+  margin: auto;
+  color: #8c8b96;
+}
+.categories-form label {
+  padding: 1rem;
+}
+
+.image_containter {
+  grid-area: images;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  margin: 1rem;
+}
+.image_containter .modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.9);
+}
+.image_containter .modal .modal_image {
+  max-height: 80%;
+  max-width: 100%;
+  margin: auto;
+  z-index: 6;
+}
+.image_containter .modal_image--close {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 6;
+  display: none;
+}
+.image_containter a {
+  text-decoration: none;
+}
+.image_containter .img {
+  max-height: 20rem;
+  max-width: 100%;
+}
+.image_containter .image-description {
+  background: #3a3a3a;
+  padding: 0;
+  color: #f6f6f7;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.image_containter .image-description .image-description_title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.2rem;
+}
+.image_containter .image-description .image-description_text {
+  margin: 0;
+  padding: 0.5rem;
+}
+.image_containter .image-description .image-description_pub-date {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  text-align: right;
+}
+
+.open-modal {
+  display: flex !important;
+}
+
+/*# sourceMappingURL=main.css.map */

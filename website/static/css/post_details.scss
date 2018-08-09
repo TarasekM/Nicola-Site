@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans');
+@import 'variables';
+
+body,html{
+  height: 100%;
+  width: 100%;
+}
+
+.back {
+  position: fixed;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  
+  a{
+    text-decoration: none;
+    color: $font-color;
+  }
+}
+
+.image_containter{
+  height: 100%;
+  margin: 5rem 0;
+  .img{
+    max-width: 100%;
+    margin:auto;
+  }
+}
+
+.image-description{
+  background: lighten($background-color,10);
+  padding: 0;
+  // border: 2.5px solid $font-color;
+  color: lighten($font-color,40);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem ;
+  width: 100%;
+
+  .image-description_title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.2rem;
+  }
+
+  .image-description_text{
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .image-description_pub-date{
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: right;
+  }
+}

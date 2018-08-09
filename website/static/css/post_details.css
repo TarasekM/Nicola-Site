@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans");
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.back {
+  position: fixed;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+.back a {
+  text-decoration: none;
+  color: #8c8b96;
+}
+
+.image_containter {
+  height: 100%;
+  margin: 5rem 0;
+}
+.image_containter .img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.image-description {
+  background: #3a3a3a;
+  padding: 0;
+  color: #f6f6f7;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.image-description .image-description_title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.2rem;
+}
+.image-description .image-description_text {
+  margin: 0;
+  padding: 0.5rem;
+}
+.image-description .image-description_pub-date {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  text-align: right;
+}
+
+/*# sourceMappingURL=post_details.css.map */

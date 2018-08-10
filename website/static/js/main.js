@@ -7,13 +7,12 @@ var modal = document.querySelector('.modal');
 var close_button = document.querySelector('.modal_image--close');
 var photos = document.querySelectorAll('.img');
 
-var srcs = [];
-console.log(body,backdrop,modal_image,close_button)
+
+// Modal Control
 
 
-// backdrop.addEventListener('click',CloseModal);
+backdrop.addEventListener('click',CloseModal);
 close_button.addEventListener('click',CloseModal);
-modal.addEventListener('click',CloseModal);
 
 for (var i = 0; i< photos.length; i++){
 
@@ -34,3 +33,14 @@ function CloseModal(){
   body.style.overflow = "scroll";
   close_button.classList.remove('open-modal');
 }
+
+
+// Conrol of displayed text content in post
+
+
+$('.image-description').find('button[href="#"]').on('click', function (e) {
+    e.preventDefault();
+    this.expand = !this.expand;
+    $(this).text(this.expand?"Ukryj":"Czytaj więcej");
+    $(this).closest('.image-description').find('.small-content, .expand-content').toggleClass('small-content expand-content');
+});

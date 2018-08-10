@@ -24,23 +24,34 @@ main {
   height: auto;
   margin: 1rem;
 }
+.image_containter .backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+}
 .image_containter .modal {
   display: none;
   position: fixed;
   z-index: 5;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
   text-align: center;
   vertical-align: middle;
   background: rgba(0, 0, 0, 0.9);
 }
 .image_containter .modal .modal_image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-height: 80%;
   max-width: 100%;
   margin: auto;
   z-index: 6;
+  animation: zoom 1s;
 }
 .image_containter .modal_image--close {
   position: fixed;
@@ -69,6 +80,8 @@ main {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .image_containter .image-description .image-description_title {
   font-size: 1.5rem;
@@ -79,6 +92,19 @@ main {
   margin: 0;
   padding: 0.5rem;
 }
+.image_containter .image-description .image-description_read-more {
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #bbb;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+.image_containter .image-description .image-description_read-more:focus {
+  outline: none;
+}
 .image_containter .image-description .image-description_pub-date {
   margin: 0;
   padding: 0.5rem;
@@ -88,6 +114,26 @@ main {
 
 .open-modal {
   display: flex !important;
+}
+
+.small-content {
+  max-height: 2rem;
+  overflow: hidden;
+  transition: max-height 0.1s linear;
+}
+
+.expand-content {
+  max-height: 50rem;
+  transition: max-height 1s ease-out;
+}
+
+@keyframes zoom {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

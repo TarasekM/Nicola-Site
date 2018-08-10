@@ -15,5 +15,10 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
+    def read_more_string(self):
+        if len(self.text) >= 25:
+            return ("%s... ")%self.text[:100]
+        return self.text
+
     def __str__(self):
         return self.title

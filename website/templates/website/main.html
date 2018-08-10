@@ -36,9 +36,10 @@
       {% for post in post_list %}
       <img src="{{MEDIA_URL}}{{post.image}}" class="img">
       <div class="image-description">
-        <h1 class="image-description_title">{{post.title}}</h1>
-        <p class="image-description_text">{{post.text}}</p>
-        <p class="image-description_pub-date">{{post.published_date}}
+        <h1 class="image-description_title">{{ post.title }}</h1>
+        <p class="image-description_text small-content">{{ post.text }}</p>
+        <button class="image-description_read-more" href="#">Czytaj więcej</button>
+        <p class="image-description_pub-date">{{ post.published_date}}</p>
       </div>
       {% endfor %}
     </div>

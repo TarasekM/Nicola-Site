@@ -6,5 +6,5 @@ from . import views
 
 urlpatterns = [
     path("", views.post_list, name='post_list'),
-    path("post/<int:pk>/", views.post_detail, name='post_detail')
+    path("post/<int:pk>/", views.post_detail, name='post_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

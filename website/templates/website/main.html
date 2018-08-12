@@ -18,28 +18,34 @@
   {% block content %}
 
   <main>
-    <form class="categories-form">
-      <label for="categories">Kategorie</label>
-      <select id="category">
-        <option value="ludzie">Ludzie</option>
-        <option value="zwierzęta">Zwierzęta</option>
-        <option value="natura">Natura</option>
+    <div class="custom-select">
+      <select>
+        <option value='all'>Wszystkie</option>
+        <option value='all'>Wszystkie</option>
+        {% for category in categories %}
+        <option value="{{ category.name }}">{{ category.name }}</option>
+        {% endfor %}
       </select>
-    </form>
     </div>
-    <div class="image_containter">
+
+    <div class="images_containter">
       <div class="backdrop"></div>
       <div class="modal">
         <img src="" class="modal_image">
             <button class="modal_image--close">&#10006;</button>
       </div>
       {% for post in post_list %}
-      <img src="{{MEDIA_URL}}{{post.image}}" class="img">
-      <div class="image-description">
-        <h1 class="image-description_title">{{ post.title }}</h1>
-        <p class="image-description_text small-content">{{ post.text }}</p>
-        <button class="image-description_read-more" href="#">Czytaj więcej</button>
-        <p class="image-description_pub-date">{{ post.published_date}}</p>
+      <div class="image_containter {{ post.category }}">
+        <img src="{{MEDIA_URL}}{{post.image}}" class="img">
+        <div class="image-description">
+          <div class="title_category_one_line">
+            <h1 class="image-description_title">{{ post.title }}</h1>
+            <p class="image-description_category">Kategoria: {{ post.category }}</p>
+          </div>
+          <p class="image-description_text small-content">{{ post.text }}</p>
+          <button class="image-description_read-more" href="#">Czytaj więcej</button>
+          <p class="image-description_pub-date">{{ post.published_date}}</p>
+        </div>
       </div>
       {% endfor %}
     </div>

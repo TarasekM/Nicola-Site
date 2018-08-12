@@ -5,17 +5,71 @@ main {
   grid-template-areas: "categories" "images" "footer";
 }
 
-.categories-form {
+.custom-select {
+  width: 12rem;
   grid-area: categories;
   align-self: center;
   margin: auto;
-  color: #8c8b96;
-}
-.categories-form label {
-  padding: 1rem;
+  position: relative;
+  font-family: Arial;
 }
 
-.image_containter {
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #6d6d6d;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #6d6d6d;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.images_containter {
   grid-area: images;
   display: flex;
   flex-direction: column;
@@ -24,7 +78,14 @@ main {
   height: auto;
   margin: 1rem;
 }
-.image_containter .backdrop {
+.images_containter .image_containter {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+.images_containter .backdrop {
   position: fixed;
   display: none;
   top: 0;
@@ -34,7 +95,7 @@ main {
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
 }
-.image_containter .modal {
+.images_containter .modal {
   display: none;
   position: fixed;
   z-index: 5;
@@ -42,7 +103,7 @@ main {
   vertical-align: middle;
   background: rgba(0, 0, 0, 0.9);
 }
-.image_containter .modal .modal_image {
+.images_containter .modal .modal_image {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -53,7 +114,7 @@ main {
   z-index: 6;
   animation: zoom 1s;
 }
-.image_containter .modal_image--close {
+.images_containter .modal_image--close {
   position: fixed;
   top: 0.5rem;
   right: 0.5rem;
@@ -66,14 +127,14 @@ main {
   z-index: 6;
   display: none;
 }
-.image_containter a {
+.images_containter a {
   text-decoration: none;
 }
-.image_containter .img {
+.images_containter .img {
   max-height: 20rem;
   max-width: 100%;
 }
-.image_containter .image-description {
+.images_containter .image-description {
   background: #3a3a3a;
   padding: 0;
   color: #f6f6f7;
@@ -83,16 +144,26 @@ main {
   display: flex;
   flex-direction: column;
 }
-.image_containter .image-description .image-description_title {
+.images_containter .image-description .title_category_one_line {
+  display: block;
+  position: relative;
+}
+.images_containter .image-description .image-description_category {
+  font-size: 0.8rem;
+  position: absolute;
+  padding: 0 0.2rem;
+  top: 0;
+  right: 0;
+}
+.images_containter .image-description .image-description_title {
   font-size: 1.5rem;
   text-align: center;
-  margin: 0.2rem;
 }
-.image_containter .image-description .image-description_text {
+.images_containter .image-description .image-description_text {
   margin: 0;
   padding: 0.5rem;
 }
-.image_containter .image-description .image-description_read-more {
+.images_containter .image-description .image-description_read-more {
   border: none;
   background: none;
   font-size: 0.8rem;
@@ -102,10 +173,10 @@ main {
   padding: 0;
   font-family: inherit;
 }
-.image_containter .image-description .image-description_read-more:focus {
+.images_containter .image-description .image-description_read-more:focus {
   outline: none;
 }
-.image_containter .image-description .image-description_pub-date {
+.images_containter .image-description .image-description_pub-date {
   margin: 0;
   padding: 0.5rem;
   font-size: 0.5rem;

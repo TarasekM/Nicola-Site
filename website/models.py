@@ -47,3 +47,8 @@ class Omnie(SingletonModel):
     title = models.CharField(max_length=200)
     text = models.TextField()
     profilowe = models.ImageField(upload_to='images/')
+
+class Kontakt(SingletonModel):
+    nr_tel = models.CharField(max_length=20)
+    email = models.CharField(max_length=50)
+    adres = models.TextField()

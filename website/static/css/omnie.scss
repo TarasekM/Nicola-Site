@@ -1,0 +1,52 @@
+
+.omnie{
+  display: flex;
+  flex-direction: column;
+  .omnie_title{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: whitesmoke;
+    padding: 1rem;
+  }
+
+  .omnie_text-wrap{
+    display: inline-block;
+    margin: 1rem;
+    .omnie_img{
+      margin: 1rem 2rem;
+      max-width: 10rem;
+      max-height: 10rem;
+      float: left;
+    }
+    .omnie_text{
+      padding: 0;
+      margin-right: 2rem;
+      color: rgba(255, 255, 255, 0.88);
+      text-align: justify;
+    }
+  }
+}
+
+.kontakt{
+  margin: 5rem;
+  text-align: center;
+  color: whitesmoke;
+  p{
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+  .kontakt_title{
+    font-size: 4rem;
+  }
+  .kontakt_number{
+    padding: 1rem;
+  }
+  .kontakt_email{
+    padding: 1rem;
+  }
+  .kontakt_adres{
+    padding: 1rem;
+  }
+
+}

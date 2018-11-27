@@ -18,10 +18,38 @@
 
   {% block content %}
     <main>
-      <p> HEADER XD </p>
       {% for element in omnie %}
-      <p> {{element.text}}</p>
+      <div class="omnie">
+        <div class= "omnie_title">
+          {{element.title}}
+        </div>
+        <div class="omnie_text-wrap">
+          <img class="omnie_img" src="{{MEDIA_URL}}{{element.profilowe}}">
+          <p class="omnie_text">
+            {{element.text}}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
 
+      {% for element in kontakt %}
+      <div class="kontakt" id=kontakt>
+        <div class="kontakt_title">
+          Kontakt
+        </div>
+        <div class="kontakt_number">
+         <p>Nr tel.</p>
+         {{element.nr_tel}}
+        </div>
+        <div class="kontakt_email">
+          <p>E-mail:</p>
+          {{element.email}}
+        </div>
+        <div class="kontakt_adres">
+          <p>Adres Korespondencyjny:</p>
+          {{element.adres}}
+        </div>
+      </div>
       {% endfor %}
     </main>
   {% endblock %}

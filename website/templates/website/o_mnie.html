@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>Nicola Kalisz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nicola Kalisz">
+  <link rel="shortcut icon" href="" >
+  {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/omnie.css' %}">
+  {% endblock %}
+</head>
+
+
+<body>
+
+  {% block content %}
+    <main>
+      <p> HEADER XD </p>
+      {% for element in omnie %}
+      <p> {{element.text}}</p>
+
+      {% endfor %}
+    </main>
+  {% endblock %}
+</body>
+
+</html>

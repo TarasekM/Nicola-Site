@@ -47,19 +47,16 @@
   <div class="mobile_nav">
     <div class="mobile_nav-items">
       <span class="mobile_nav-item">
-        <a href="">Strona główna</a>
+        <a href="{% url 'post_list' %}">Strona główna</a>
       </span>
       <span class="mobile_nav-item">
-        <a href="">O mnie</a>
-      </span>
-      <span class="mobile_nav-item">
-        <a href="">Zdjęcia</a>
+        <a href="{% url 'omnie' %}">O mnie </a>
       </span>
       <span class="mobile_nav-item">
         <a href="">Kategorie</a>
       </span>
       <span class="mobile_nav-item">
-        <a href="">Kontakt</a>
+        <a href="{% url 'kontakt' %}">Kontakt</a>
       </span>
       <button class="mobile_nav-item--close">&#10006;</button>
     </div>

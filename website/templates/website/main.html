@@ -32,7 +32,7 @@
       <div class="backdrop"></div>
       <div class="modal">
         <img src="" class="modal_image">
-            <button class="modal_image--close">&#10006;</button>
+        <button class="modal_image--close">&#10006;</button>
       </div>
       {% for post in post_list %}
       <div class="image_containter {{ post.category }}">
@@ -42,9 +42,9 @@
             <h1 class="image-description_title">{{ post.title }}</h1>
             <p class="image-description_category">Kategoria: {{ post.category }}</p>
           </div>
-          <p class="image-description_text small-content">{{ post.text }}</p>
-          <button class="image-description_read-more" href="#">Czytaj więcej</button>
-          <p class="image-description_pub-date">{{ post.published_date}}</p>
+          <div class="image-description_text small-content">{{ post.text }}
+            <p class="image-description_pub-date">{{ post.published_date}}</p>
+          </div>
         </div>
       </div>
       {% endfor %}

@@ -107,4 +107,11 @@ header {
   transform: translateY(0) !important;
 }
 
+@media (min-width: 480px) {
+  .mobile_nav {
+    width: 18rem;
+    height: 23rem;
+  }
+}
+
 /*# sourceMappingURL=shared.css.map */

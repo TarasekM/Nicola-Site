@@ -36,7 +36,21 @@ function CloseModal(){
 
 
 // Conrol of displayed text content in post
+var image_description = document.querySelectorAll('.image-description');
+var pub_date = document.getElementsByClassName('image-description_pub-date');
 
+var button;
+for (var i = 0; i< image_description.length; i++){
+  button = document.createElement('BUTTON');
+  button.setAttribute("class","image-description_read-more");
+  button.setAttribute('href', "#");
+  button.innerHTML = "Czytaj więcej";
+  image_description[i].appendChild(button);
+  //  if(button.previousElementSibling){
+  //
+  //   button.parentNode.insertBefore(button,pub_date[i]);
+  // }
+}
 
 $('.image-description').find('button[href="#"]').on('click', function (e) {
     e.preventDefault();
@@ -67,7 +81,6 @@ for (i = 0; i < x.length; i++) {
         for (i = 0; i < s.length; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             var to_filter = s.options[i].getAttribute('value');
-            console.log(to_filter);
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");

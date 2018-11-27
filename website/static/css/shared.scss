@@ -111,3 +111,11 @@ header{
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+
+@media (min-width:480px) {
+  .mobile_nav{
+    width: 18rem;
+    height: 23rem;
+  }
+}

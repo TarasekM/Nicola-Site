@@ -15,6 +15,6 @@ def post_detail(request, pk):
     return render(request, 'website/post_detail.html', {'post':post})
 
 def omnie(request):
-    omnie = Omnie.objects.order_by('id')
+    opis = Omnie.objects.order_by('id')
     kontakt = Kontakt.objects.order_by('id')
-    return render(request, 'website/o_mnie.html', {'omnie':omnie,"kontakt":kontakt})
+    return render(request, 'website/o_mnie.html', {'omnie':opis,"kontakt":kontakt})

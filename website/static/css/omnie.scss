@@ -28,7 +28,7 @@ main{
 
     .omnie_text{
       padding: 4rem;
-      margin-right: 2rem;
+      margin: 0;
       color: rgba(255, 255, 255, 0.88);
       width: $width;
       text-align: center;
@@ -37,7 +37,7 @@ main{
   }
 
   .kontakt{
-    // margin: 8rem 5rem;
+    margin: 0;
     text-align: center;
     color: whitesmoke;
     p{
@@ -58,20 +58,6 @@ main{
 
     .kontakt_adres{
       padding: 1rem;
-    }
-  }
-}
-
-
-@media (min-width: 1281px){
-  main{
-    display: block;
-    .omnie{
-      display: flex;
-      .omnie_text{
-        width: auto;
-        max-width: 50rem;
-      }
     }
   }
 }

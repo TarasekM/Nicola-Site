@@ -26,13 +26,14 @@ main .omnie .cont .omnie_img {
 }
 main .omnie .omnie_text {
   padding: 4rem;
-  margin-right: 2rem;
+  margin: 0;
   color: rgba(255, 255, 255, 0.88);
   width: 25rem;
   text-align: center;
   align-self: center;
 }
 main .kontakt {
+  margin: 0;
   text-align: center;
   color: whitesmoke;
 }
@@ -49,19 +50,6 @@ main .kontakt .kontakt_social-media a img {
 }
 main .kontakt .kontakt_adres {
   padding: 1rem;
-}
-
-@media (min-width: 1281px) {
-  main {
-    display: block;
-  }
-  main .omnie {
-    display: flex;
-  }
-  main .omnie .omnie_text {
-    width: auto;
-    max-width: 50rem;
-  }
 }
 
 /*# sourceMappingURL=omnie.css.map */

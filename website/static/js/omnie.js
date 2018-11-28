@@ -11,10 +11,6 @@ $(window).resize(
 );
 
 function Resize(){
-  console.log(document.body.offsetWidth);
-  if (document.body.offsetWidth <= 1263){
-    kontakt.style.marginTop = text.offsetHeight + 'px';
-  }else {
-    kontakt.style.marginTop = 5 +'rem';
-  }
+  console.log(text.offsetHeight + 'px');
+  kontakt.style.marginTop = text.offsetHeight + 'px';
 }

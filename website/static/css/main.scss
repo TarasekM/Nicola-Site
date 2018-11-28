@@ -151,6 +151,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .title_category_one_line{
       display: block;
@@ -173,6 +174,7 @@ main{
     .image-description_text{
       margin: 0;
       padding: 0.5rem;
+      text-align: center;
 
       .image-description_pub-date{
         margin: auto;
@@ -229,7 +231,7 @@ main{
 
      .image_containter{
        max-width: 80%;
-       align-self: center;
+       align-self: flex-start;
        justify-self: center;
        cursor: pointer;
        }

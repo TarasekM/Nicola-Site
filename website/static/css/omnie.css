@@ -43,11 +43,9 @@ main .kontakt p {
 main .kontakt .kontakt_title {
   font-size: 4rem;
 }
-main .kontakt .kontakt_number {
-  padding: 1rem;
-}
-main .kontakt .kontakt_email {
-  padding: 1rem;
+main .kontakt .kontakt_social-media a img {
+  width: 6rem;
+  height: 6rem;
 }
 main .kontakt .kontakt_adres {
   padding: 1rem;

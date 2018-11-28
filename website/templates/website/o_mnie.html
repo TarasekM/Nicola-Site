@@ -28,18 +28,18 @@
           {% for element in kontakt %}
           <div class="kontakt" id=kontakt>
             <div class="kontakt_title">
-              Kontakt
+              Znajdziesz mnie na:
             </div>
-            <div class="kontakt_number">
-             <p>Nr tel.</p>
-             {{element.nr_tel}}
-            </div>
-            <div class="kontakt_email">
-              <p>E-mail:</p>
-              {{element.email}}
+            <div class="kontakt_social-media">
+              <a href="{{element.facebook}}" target="_blank">
+                <img src="{% static 'images/facebook.png' %}" alt="">
+              </a>
+              <a href="{{element.instagram}}" target="_blank">
+                <img src="{% static 'images/instagram.png' %}" alt="">
+              </a>
             </div>
             <div class="kontakt_adres">
-              <p>Adres Korespondencyjny:</p>
+              <p>Obszar działalności</p>
               {{element.adres}}
             </div>
           </div>

@@ -47,12 +47,15 @@ main{
     .kontakt_title{
       font-size: 4rem;
     }
-    .kontakt_number{
-      padding: 1rem;
+    .kontakt_social-media{
+        a{
+          img{
+            width: 6rem;
+            height: 6rem;
+          }
+        }
     }
-    .kontakt_email{
-      padding: 1rem;
-    }
+
     .kontakt_adres{
       padding: 1rem;
     }

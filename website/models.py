@@ -49,6 +49,8 @@ class Omnie(SingletonModel):
     profilowe = models.ImageField(upload_to='images/')
 
 class Kontakt(SingletonModel):
-    nr_tel = models.CharField(max_length=20)
-    email = models.CharField(max_length=50)
+    nr_tel = models.CharField(max_length=20,blank=True, null=True)
+    email = models.CharField(max_length=50,blank=True, null=True)
     adres = models.TextField()
+    facebook = models.CharField(max_length=200,default='facebook.com')
+    instagram = models.CharField(max_length=200,default='instagram.com')

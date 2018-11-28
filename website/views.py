@@ -6,7 +6,7 @@ from .models import Omnie
 from .models import Kontakt
 # Create your views here.
 def post_list(request):
-    post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-created_date')
     categories = Categories.objects.order_by('name')
     return render(request, 'website/main.html',{'post_list':post_list,"categories":categories})
 

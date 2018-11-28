@@ -1,51 +1,69 @@
-.omnie {
+main {
+  display: flex;
+  justify-content: center;
+}
+main .omnie {
+  margin: 5rem;
+  justify-content: center;
+}
+main .omnie .cont {
   display: flex;
   flex-direction: column;
+  width: 25rem;
+  height: 35rem;
 }
-.omnie .omnie_title {
+main .omnie .cont .omnie_title {
   width: 100%;
-  text-align: center;
   font-size: 4rem;
   color: whitesmoke;
   padding: 1rem;
+  text-align: center;
 }
-.omnie .omnie_text-wrap {
-  display: inline-block;
-  margin: 1rem;
-}
-.omnie .omnie_text-wrap .omnie_img {
-  margin: 1rem 2rem;
-  max-width: 10rem;
-  max-height: 10rem;
+main .omnie .cont .omnie_img {
+  max-width: 25rem;
+  max-height: 30rem;
   float: left;
 }
-.omnie .omnie_text-wrap .omnie_text {
-  padding: 0;
+main .omnie .omnie_text {
+  padding: 4rem;
   margin-right: 2rem;
   color: rgba(255, 255, 255, 0.88);
-  text-align: justify;
+  width: 25rem;
+  text-align: center;
+  align-self: center;
 }
-
-.kontakt {
-  margin: 5rem;
+main .kontakt {
   text-align: center;
   color: whitesmoke;
 }
-.kontakt p {
+main .kontakt p {
   font-weight: bolder;
   font-size: 1.5rem;
 }
-.kontakt .kontakt_title {
+main .kontakt .kontakt_title {
   font-size: 4rem;
 }
-.kontakt .kontakt_number {
+main .kontakt .kontakt_number {
   padding: 1rem;
 }
-.kontakt .kontakt_email {
+main .kontakt .kontakt_email {
   padding: 1rem;
 }
-.kontakt .kontakt_adres {
+main .kontakt .kontakt_adres {
   padding: 1rem;
+}
+
+@media (min-width: 1281px) {
+  main {
+    display: block;
+  }
+  main .omnie {
+    display: flex;
+  }
+  main .omnie .omnie_text {
+    width: auto;
+    max-width: 50rem;
+  }
 }
 
 /*# sourceMappingURL=omnie.css.map */

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 {% extends 'website/base.html' %}
-<html>
 {% load static %}
 <head>
-  <meta charset="utf-8">
-  <title>Nicola Kalisz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Nicola Kalisz">
-  <link rel="shortcut icon" href="" >
+  {% block meta %}
+    <meta name="description" content="Szukasz dobrego fotografa do sesji zdjęciowej? Masz pomysł na sesję lub szukasz inspiracji? Zapraszam na mój artystyczny blog fotograficzny"/>
+    <meta name="robots" content="index"/>
+  {% endblock %}
+
   {% block styles %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
   {% endblock %}
@@ -39,7 +38,7 @@
         <img src="{{MEDIA_URL}}{{post.image}}" class="img">
         <div class="image-description">
           <div class="title_category_one_line">
-            <h1 class="image-description_title">{{ post.title }}</h1>
+            <h2 class="image-description_title">{{ post.title }}</h2>
             <p class="image-description_category">Kategoria: {{ post.category }}</p>
           </div>
           <div class="image-description_text small-content">{{ post.text }}
@@ -53,5 +52,3 @@
   <script src="{% static 'js/main.js' %}"></script>
   {% endblock %}
 </body>
-
-</html>

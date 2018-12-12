@@ -1,70 +1,52 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pl">
 {% load static %}
 <head>
   <meta charset="utf-8">
-  <title>Nicola Kalisz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Nicola Kalisz">
-  <link rel="shortcut icon" href="" >
-
+  <title>Fotografia artystyczna Bytom Blog fotograficzny Sesje zdjęciowe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Nicola Kalisz"/>
+  <meta name="google-site-verification" content="APTMAeKKUPhLqCMsogJ_I-l_eKGQMOSAhT-4AjQKqzc" />
+  <link rel="shortcut icon" href="" />
+  <meta property="og:locale" content="pl"/>
+  {% block meta %}
+  {% endblock %}
   <link rel="stylesheet" href="{% static 'css/shared.css' %}">
   <link rel="stylesheet" href="{% static 'images' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  {% block styles %} {% endblock %}
+  {% block styles %}
+  {% endblock %}
 </head>
 
 <body>
+    <header>
+      <button class="toggle-button">
+        <span class="toggle-button__bar"></span>
+        <span class="toggle-button__bar"></span>
+        <span class="toggle-button__bar"></span>
+      </button>
 
-  <header>
-    <button class="toggle-button">
-      <span class="toggle-button__bar"></span>
-      <span class="toggle-button__bar"></span>
-      <span class="toggle-button__bar"></span>
-    </button>
-
-    <div class="brand">
-      <img src="">
+    </header>
+    <div class="mobile_nav">
+      <div class="mobile_nav-items">
+        <span class="mobile_nav-item">
+          <a href="{% url 'post_list' %}" lang="pl">Strona główna</a>
+        </span>
+        <span class="mobile_nav-item">
+          <a href="{% url 'omnie' %}" lang="pl">O mnie </a>
+        </span>
+        <span class="mobile_nav-item">
+          <a href="">Kategorie</a>
+        </span>
+        <span class="mobile_nav-item">
+          <a href="{% url 'omnie' %}#kontakt" lang="pl">Kontakt</a>
+        </span>
+        <button class="mobile_nav-item--close">&#10006;</button>
+      </div>
     </div>
-
-    <nav class="header_nav">
-      <ul class="header_nav__items">
-        <li class="header_nav__item">
-          <a href="upload/index.html">Zdjęcia</a>
-        </li>
-        <li class="header_nav__item">
-          <a href="upload/index.html">Kategorie</a>
-        </li>
-        <li class="header_nav__item">
-          <a href="curate/index.html">O mnie</a>
-        </li>
-        <li class="header_nav__item">
-          <a href="upload/index.html">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class="mobile_nav">
-    <div class="mobile_nav-items">
-      <span class="mobile_nav-item">
-        <a href="{% url 'post_list' %}">Strona główna</a>
-      </span>
-      <span class="mobile_nav-item">
-        <a href="{% url 'omnie' %}">O mnie </a>
-      </span>
-      <span class="mobile_nav-item">
-        <a href="">Kategorie</a>
-      </span>
-      <span class="mobile_nav-item">
-        <a href="{% url 'omnie' %}#kontakt">Kontakt</a>
-      </span>
-      <button class="mobile_nav-item--close">&#10006;</button>
-    </div>
-  </div>
-
-  {% block content %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
   <script src="{% static 'js/base.js' %}"></script>
 </body>
 

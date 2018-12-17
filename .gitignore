@@ -3,3 +3,6 @@
 __pycache__
 nenv
 KEY.txt
+wsgi.py
+manage.py
+base_settings.py
